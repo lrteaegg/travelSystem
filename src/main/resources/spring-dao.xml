@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"  
+	xmlns:jee="http://www.springframework.org/schema/jee" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+	
+	<!-- 配置属性文件 -->
+	<util:properties id="db" 
+			location="classpath:jdbc.properties"/>
+			
+	<!-- 配置数据库的连接池 -->
+	<bean id="dataSource" 
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url"
+				 value="#{db.url}"/>
+		<property name="username" 
+				value="#{db.username}"/>
+		<property name="password" 
+				value="#{db.password}"/>
+		<property name="driverClassName" 
+				value="#{db.driver}"/>
+	</bean>
+	
+	<!-- 以下两个bean，完成spring和mybatis的整合 -->
+	<!-- 配置 MapperScannerConfigurer，配置接口的扫描包-->
+	<bean 
+	class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" 
+			value="cn.tedu.ssm.mapper"/>
+	</bean>
+	
+	<!-- 实例化 SqlSessionFactory-->
+	<bean id="sqlSessionFactory" 
+	class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="mapperLocations" value="classpath:mappers/*.xml"/>
+	</bean>	
+	
+</beans>
+
+
+
+
+
+
+
+
+
+

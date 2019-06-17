@@ -1,0 +1,47 @@
+footer {
+	width:1000px;
+	margin: 0px auto;
+	padding: 15px;
+	background-color: #fff;
+	
+}
+footer h3{
+	border-bottom: 1px dotted;
+	padding-bottom: 10px;
+	color: #000;
+	font-family: '黑体';
+}
+
+footer ul{
+	list-style: none;
+	display: inline-block;
+	width:300px;
+}
+footer ul li{	
+	margin-right: 22px;
+}
+.footer-left ul li{
+	display: inline-block;
+	font-size: 50px;
+}
+.footer-center ul>li{
+	font-size:20px;
+	margin:10px;
+}
+.footer-center ul li span{
+	margin-right:10px;
+	font-size: 25px;
+}
+#send {
+	margin-top: 20px;
+}
+#send input{
+	padding: 20px;
+	margin-bottom: 10px;
+}
+#send button{
+	padding: 8px;
+}
+.footer-right p{
+	margin-top: 10px;
+}

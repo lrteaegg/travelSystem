@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link href = '../dist/css/bootstrap.min.css' rel = "stylesheet">
+<script type="text/javascript" src = '../jquery-3.1.1.min.js'></script>
+<script type="text/javascript" src = '../dist/js/bootstrap.min.js'></script>
+<style type="text/css">
+#div1{
+	width: 600px;
+	height: 400px;
+	margin: 50px auto;
+	position:relative;
+	text-align: center;
+	padding-left: 50px;
+	
+}
+#div1 img{
+	position:absolute;
+	left:0;
+	top:0;
+	margin: 0 auto;
+}
+.border{
+	border: 1px solid red;
+}
+.front{
+	 width:600px;
+	 height : 400px; 
+}
+.back{	
+	left: 300px;
+	width:0;
+	height:400px;
+
+}
+</style>
+<script type="text/javascript">
+	$(function(){
+	 /* 	$("#div1").mouseenter(function(){
+			var imgObj = $(this).find("img");
+			imgObj.stop().css({
+				width:"600",
+				left:"0px"
+			});
+			var wValue = 1.5*imgObj.width();
+			var hValue = imgObj.height();
+			imgObj.animate({width:0,height:hValue,
+				left:("+"+(imgObj.width())/2)},1000);
+		}).mouseleave(function(){
+			imgObj.stop().animate({
+				width:"600",
+				height:"400",
+				left:"0px",
+				top:"0px"
+			},1000)
+		}); */ 
+		$("#div1").hover(function(){
+			var imgObj1 = $(this).find(".front");
+			var imgObj2 = $(this).find(".back");		
+
+			imgObj1.stop().animate({width:0,left:"300px"},100,
+				function(){
+					imgObj2.css({left:"300px",width:0});
+					imgObj2.stop().animate({width:600,left:"0px"},100);
+				});
+		},function(){
+			var imgObj1 = $(this).find(".front");
+			var imgObj2 = $(this).find(".back");
+			imgObj2.stop().animate({width:0,left:"300px"},100,
+					function(){
+					imgObj1.stop().animate({width:600,left:"0px"},100)
+				}
+			);
+			
+		});
+	}); 
+</script>
+</head>
+<body >
+	<div id = 'div1'class = 'border'>
+		
+		<img class = "front" alt="" src="images/1.jpg">
+		<img class = "back" alt="" src="images/2.jpg" >
+	</div>
+	
+</body>
+</html>
+
+
+
+

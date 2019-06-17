@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+	<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+		"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+	<!-- mapper节点的namespace值必须和接口名相同 -->
+<mapper namespace="cn.tedu.ssm.mapper.TicketMapper">
+	<insert id="insertTicket" parameterType="cn.tedu.ssm.bean.Ticket">
+		insert into ticket(
+			start,end,money
+		)values(
+			#{start},#{end},#{money}
+		)		
+	</insert>
+	
+	<!-- List<Dept> selectAll(); -->
+	<select id="selectAll" resultType = "cn.tedu.ssm.bean.Ticket">
+		select 
+			id,start,end,money
+		from 
+			ticket;
+	</select>
+	
+	<delete id="deleteTicket" >
+		delete from ticket where id = #{id}
+	</delete>
+</mapper>
+	
+	
+	
+	
+	
+	
+	
+	
+	

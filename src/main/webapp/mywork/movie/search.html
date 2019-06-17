@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>查询</title>
+<link href = '../dist/css/bootstrap.min.css' rel = "stylesheet">
+<link href = 'css/header.css' rel = "stylesheet">
+<link href = 'css/search.css' rel = "stylesheet">
+<script type="text/javascript" src = '../jquery-3.1.1.min.js'></script>
+<script type="text/javascript" src = '../dist/js/bootstrap.min.js'></script>
+
+</head>
+<body>
+
+	<header class = 'container'>
+		<nav class = "navbar navbar-default">
+			<div class = "container-fluid">
+				<div class = "navbar-header">
+					<a class="navbar-brand" href="#">开心旅游</a>
+				</div>   	 
+				<ul class="nav navbar-nav navbar-right">
+					<!-- 搜索框 -->
+					 <form class="navbar-form navbar-left">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Search">
+		        </div>
+		        <button type="submit" class="btn btn-primary">搜索</button>
+	     		</form>
+					<li><a href="#">Link</a></li>	
+					<li><a href="#">Link</a></li>	
+					<li><a href="#">Link</a></li>	
+					<li class = "user_info">
+							<div class="dropdown ">
+							    <!-- <button type="button" class="btn dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">主题 -->
+							    	<img alt="" src="images/1.jpg" id="dropdownMenu" data-toggle="dropdown">
+							    </button>
+							    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+							        <li role="presentation">
+							            <a role="menuitem" tabindex="-1" href="#">个人中心</a>
+							        </li>
+							        <li role="presentation">
+							            <a role="menuitem" tabindex="-1" href="#">我的订单</a>
+							        </li>
+							        <li role="presentation">
+							            <a role="menuitem" tabindex="-1" href="#">我的钱包</a>
+							        </li>
+							        <li role="presentation" class="divider"></li>
+							        <li role="presentation">
+							            <a role="menuitem" tabindex="-1" href="#">我的优惠卷</a>
+							        </li>
+							    </ul>
+							</div>
+						</li>					
+				</ul>				
+			</div>
+		</nav>	
+	</header>
+	<div class= "bath_bar container">
+		<ol class="breadcrumb">
+		  <li><a href="#">酒店服务</a></li>
+		  <li><a href="#">上海酒店</a></li>	  
+		</ol>
+	</div>
+	<div class = "filter_box border">
+		<div class = "filter_item">
+			<div class = "filter_item_hd">价格</div>	
+			<div class = "filter_item_bd">
+				<a>不限</a>
+				<label >
+					<input type="checkbox"><span>￥150以下</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>￥150-300</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>￥300-450</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>￥450-600</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>￥600以上</span>
+				</label>
+			</div>
+		</div>
+		<div class = "filter_item">
+			<div class = "filter_item_hd">星级</div>
+			<div class = "filter_item_bd">
+				<a>不限</a>
+				<label >
+					<input type="checkbox"><span>二星级以及以下</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>三星级/舒适</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>四星级/高档</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>五星级/豪华</span>
+				</label>
+			</div>
+		</div>
+		<div class = "filter_item">
+			<div class = "filter_item_hd">特色</div>
+			<div class = "filter_item_bd">
+				<a>不限</a>
+				<label >
+					<input type="checkbox"><span>公寓</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>客栈</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>民居</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>别墅</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>青旅</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>温泉酒店</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>海滨风光</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>休闲度假</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>亲子酒店</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>浪漫情侣</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>商务出行</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>农家乐</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>精品酒店</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>豪宅</span>
+				</label>
+				
+			</div>
+					
+		</div>
+		<div class = "filter_item">
+			<div class = "filter_item_hd">特色</div>
+				<div class = "filter_item_bd">
+					<a>不限</a>
+					<div class = "tab_hd">
+						<ul class="nav nav-tabs" id="myTab" >
+						  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+						  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+						  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+						  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+						</ul>
+					</div>
+					
+					<div class="tab-content">
+					  <div class="tab-pane active" id="home">123</div>
+					  <div class="tab-pane" id="profile">456</div>
+					  <div class="tab-pane" id="messages">789</div>
+					  <div class="tab-pane" id="settings">12303</div>
+					</div>
+	
+					<script>
+					  $(function () {
+					    $('#myTab a:last').tab('show')
+					  })
+					</script>
+					
+				</div>
+			</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

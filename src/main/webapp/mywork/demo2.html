@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>点击左边改变内容</title>
+<link href = '../dist/css/bootstrap.min.css' rel = "stylesheet">
+<script type="text/javascript" src = '../jquery-3.1.1.min.js'></script>
+<script type="text/javascript" src = '../dist/js/bootstrap.min.js'></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#1").click(function(){
+			htmlobj=$.ajax({url:"index.jsp",async:false});
+			$("#myDiv").html(htmlobj.responseText);
+		});
+		$("#2").click(function(){
+			htmlobj=$.ajax({url:"index.html",async:false});
+			$("#myDiv").html(htmlobj.responseText);
+		});
+	});
+</script>
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+	<div id ="myDiv"><h2>通过AJAX
+	改变文本</h2></div>
+	<button id="1" type="button">改变内容</button>
+	<button id="2" type="button">改变内容2</button>
+</body>
+</html>

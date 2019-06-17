@@ -1,0 +1,60 @@
+
+*{
+
+	margin:0px;
+	padding:0px;
+}
+body{
+	background-color:#f5f5f5;
+}
+header{
+	margin:0px auto;
+	width:1100px;
+}
+
+.form-group{
+
+	height: 40px;
+}
+	
+.form-group input{
+	width:80%;
+}
+.container{
+	width:1000px;
+	padding-bottom:110px;
+	background-image: url("../images/2.jpg");
+	background-size: cover;
+	background-position:center;
+	background-repeat: no-repeat;
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container-fluid ul>li>button{
+	margin-right: 15px;
+}
+.logo {
+    padding: 15em 0 10em;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.center-container {
+	height: 600px;
+	margin-bottom: 50px;
+}
+
+
+/* form表单下的a标签 */
+form a{
+ 	float:right;
+ }
+ .form-group input{
+ display:inline;
+ 
+ }
+

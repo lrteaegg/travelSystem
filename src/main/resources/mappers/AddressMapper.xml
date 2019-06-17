@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+	<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+		"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+		<!-- 只有接口的声明：namespace值必须和接口相同 -->
+	<mapper namespace="cn.tedu.ssm.mapper.AddressMapper">
+	<!-- 添加地址信息
+		Integer insertAddress(Address adderss);
+	 -->
+		<insert id="insertAddress" parameterType="cn.tedu.ssm.bean.Address">
+		
+			insert into t_address(
+				province,city,area,user_address
+			)values(
+				#{province},#{city},#{area},#{userAddress}
+			)
+			
+		</insert>
+		<!-- 修改地址信息
+				Integer updateAddress(Address address);
+		 -->
+		<update id="updateAddress" parameterType="cn.tedu.ssm.bean.Address">
+			update t_address
+			set 
+				province=#{province},city=#{city},area=#{area},user_address=#{userAddress}
+			where 
+				id = #{id}
+		</update>
+		<!-- Integer deleteAddress(Integer id); -->
+		<delete id="deleteAddress" parameterType="cn.tedu.ssm.bean.Address">
+			delete from t_address where id = #{id}
+		
+		</delete>
+		<!-- 
+		根据id查询地址信息
+		Address selectById(Integer id); 
+		如果字段名和实体类的属性名不相同，那么列起别名，别名和实体类的属性名相同
+		-->
+		<select id="selectById" resultType="cn.tedu.ssm.bean.Address">
+			select 
+				id,province,city,area,user_address userAddress
+			from t_address
+			where id = #{id}
+		</select>
+		
+		<select id="selectAll" resultMap="addressMap">
+		select * from t_address
+		</select>
+		
+			<!-- List<Address> selectAll(); -->
+		<resultMap type="cn.tedu.ssm.bean.Address" id="addressMap">
+			<id column = "id" property="id"/>
+			<id column = "province" property="province"/>
+			<id column = "city" property="city"/>
+			<id column = "area" property="area"/>
+			<id column = "user_address" property="userAddress"/>
+		</resultMap>
+		
+	
+	
+		
+	</mapper>
+	
+	
+	
+	
+	
+	
+	
+	
+	

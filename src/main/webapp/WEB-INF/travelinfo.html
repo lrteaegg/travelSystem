@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> </title>
+<link href = '../dist/css/bootstrap.min.css' rel = "stylesheet">
+<link href = 'css/footer.css' rel = "stylesheet">
+<link href = 'css/header.css' rel = "stylesheet">
+<script type="text/javascript" src = '../jquery-3.1.1.min.js'></script>
+<script type="text/javascript" src = '../dist/js/bootstrap.min.js'></script>
+<style type="text/css">
+	*{
+		padding: 0px;
+		margin: 0px;
+	}
+	.border{
+		border:1px solid red;
+	}
+	body{
+		background-color: #f5f5f5;
+	}
+	
+	.lf{
+		margin-bottom: 30px;
+		height: 450px;
+	}
+	.leftsidebox{
+		margin-left: 20px;
+		width:250px;
+		float:left;
+		background-color: #fff;
+		float: left;
+		display: inline;
+	}
+	.leftsidebox ul{
+		
+		padding:0px;
+		height:20px;
+	}
+	.leftsidebox li{
+		list-style: none;
+		float: left;
+		padding-left:10px;
+	}
+	
+	.title{
+		height:40px;
+
+		
+		font-size: 25px;
+		line-height: 40px;
+		color: #fff;
+		
+		background-color: #0aa1ed;
+	}
+	.title span{
+		padding-left: 20px;
+	}
+	.mod-search{
+		width: 1100px;
+		height: 300px;
+		margin: 0px auto;
+	}
+	.searchbox{
+		width: 625px;
+		height: 240px;
+		margin: 15px 0;
+		border-radius: 5px;
+		background-color: #fff;
+	}
+	.searchbox>ul{
+		width: 83px;
+		height:240px;
+		margin: 0px 0px;
+		
+		position: absolute;
+	}
+	.searchbox>ul>li{
+		
+		height: 60px; 
+		width: 83px;
+		font-size:20px;
+		color:#fff;
+		border-bottom: 1px #fff dashed;
+		line-height: 55px; 
+		padding-left: 15px;
+		list-style:none;
+		cursor: pointer;
+		background-color: #2577e3;
+		
+	}
+	.searchbox>ul a{
+		color: #fff;
+		font-weight: bold;
+	}
+	
+	.searchbox>ul>li:hover{
+		color: #2577e3;
+		background-color: #fff;
+	}
+	.form-inline label{
+		width:61px;
+		text-align: right;
+	}
+	#s_input{
+		width:418px;
+	}
+	.s_item_cont{
+		width: 500px;
+		height: 35px;
+		margin-top: 5px;
+		line-height: 35px;
+		
+	}
+	.content{
+		height:220px;
+		margin-left:85px;
+		padding: 20px 20px 5px;
+	}
+	.s_item{
+		float: left;
+		width: 237px;
+
+	}
+	.s_item2{
+		float: left;
+		width: 245px;
+
+	}
+	.selete{
+		width: 145px;
+		height: 28px;
+	}
+	#key_input{
+		width: 180px;
+	}
+	.search{
+		width:110px;
+		margin-top: 5px;
+		float: right;
+	}
+	.place{
+		margin-top:15px;
+		margin-bottom:10px;
+		
+		font-size:15px;
+		color:  #0aa1ed;
+		
+	}
+	.place>p{
+		margin-left: 10px;
+	}
+	.rightsidebox{
+		margin-left: 30px;
+		padding:20px;
+		width:800px;
+		float:left;
+		background-color: #fff;
+		display: inline;
+	}
+	.tab-content{
+		
+	}
+</style>
+
+<script type="text/javascript">
+
+$(function(){
+	$(".thumbnail").hover(function(){
+		$(this).children().eq(0).stop().slideUp(200);
+		$(this).children().eq(1).stop().slideDown(200);
+		console.log(this);
+	},function(){
+		$(this).children().eq(0).stop().slideDown(200);
+		$(this).children().eq(1).stop().slideUp(200);
+	}); 
+});
+
+</script>
+</head>
+<body>
+
+<header class = 'container'>
+		<nav class = "navbar navbar-default">
+			<div class = "container-fluid">
+				<div class = "navbar-header">
+					<a class="navbar-brand" href="#">开心旅游</a>
+				</div>
+				
+     	 
+				<ul class="nav navbar-nav navbar-right">
+					<!-- 搜索框 -->
+					 <form class="navbar-form navbar-left">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Search">
+		        </div>
+		        <button type="submit" class="btn btn-primary">搜索</button>
+	     		</form>
+					<li><a href="#">旅游</a></li>	
+					<li><a href="#">酒店</a></li>	
+					<li><a href="#">飞机</a></li>	
+					<li class = "user_info">
+							<div class="dropdown ">
+							    <!-- <button type="button" class="btn dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">主题 -->
+							    	<img alt="" src="images/1.jpg" id="dropdownMenu" data-toggle="dropdown">
+							    </button>
+							    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+							        <li role="presentation">
+							            <a role="menuitem" tabindex="-1" href="#">个人中心</a>
+							        </li>
+							        <li role="presentation">
+							            <a role="menuitem" tabindex="-1" href="#">我的订单</a>
+							        </li>
+							        <li role="presentation">
+							            <a role="menuitem" tabindex="-1" href="#">我的钱包</a>
+							        </li>
+							        <li role="presentation" class="divider"></li>
+							        <li role="presentation">
+							            <a role="menuitem" tabindex="-1" href="#">我的优惠卷</a>
+							        </li>
+							    </ul>
+							</div>
+						</li>					
+				</ul>				
+			</div>
+		</nav>	
+</header>
+<div class = "mod mod-search">
+	<div	id = "searchBox" class = "searchbox">
+		<ul>
+			<li><a href ="search.html">酒店</a></li>
+			<li><b>机票</b></li>
+			<li><b>旅游</b></li>
+			<li><b>门票</b></li>
+		</ul>
+		<div class = "content">
+			 <form class="form-inline">
+		        <div class="s_item_cont form-group ">
+		        	<label for="input">目的地</label>
+		          <input type="text" class="form-control" id = "s_input" placeholder="Search" >
+		        </div>
+		        <div class = "form-group s_item_cont">
+	        		<div class = "s_item">
+	        			<label for="meeting">约会日期</label>
+								<input id = "meeting" type = "date" class="form-control" value = "2014-01-13" style="width: auto;">
+	        		</div>
+							<div class = "s_item2">
+								<label for="meeting">约会日期</label>
+							<input id = "meeting" type = "date" class="form-control" value = "2014-01-13" style="width: auto;">
+							</div>
+							
+						</div>
+						<div class = "form-group s_item_cont">
+						<div class = "s_item">
+							<label>房间数</label>
+							<select id = "roomCount " class = "selete">
+								<option selected = "selected"	value = "1">1间</option>
+								<option	value = "2">2间</option>
+								<option	value = "3">3间</option>
+								<option	value = "4">4间</option>
+								<option	value = "5">5间</option>
+							</select>
+						</div>
+						<div class = "s_item2">
+							<label>住客数</label>
+							<select id = "personCount"  class = "selete">
+								<option selected = "selected"	value = "1">1人</option>
+								<option	value = "2">2人</option>
+								<option	value = "3">3人</option>
+								<option	value = "4">4人</option>
+								<option	value = "5">5人</option>
+							</select>
+						</div>
+						</div>
+						
+						<div class = "form-group s_item_cont">
+						<div class = "s_item">
+							<label>酒店等级</label>
+							<select id = "roomRank" class = "selete">
+								<option selected = "selected"	value = "1">不限</option>
+								<option	value = "2">五星级/豪华</option>
+								<option	value = "3">四星级/高端</option>
+								<option	value = "4">三星级/舒适</option>
+								<option	value = "5">二星级以下/经济</option>
+							</select>
+							</div>
+							
+							<div class = "s_item2">
+							<label>关键字</label>
+							 <input type="text" class="form-control" id = "key_input">
+							</div>
+						</div>
+						<div class = "form-group search"> 
+							<button type="submit" class="btn btn-primary btn-block">搜索</button>
+						</div>
+						
+	     </form>
+	     
+		</div>
+	</div>
+</div>
+	<div  class = 'container lf'>
+	<div class = 'leftsidebox '>
+		<div class = 'title'>
+			<span class="glyphicon glyphicon-adjust"></span>
+			<span class = 't'>主题旅游</span>
+		</div>
+			
+			<div class = 'place'>
+				<p>北京</p>
+				
+				<ul>
+					<li><a href="#"> 故宫 </a></li>
+					<li><a href="#"> 长城 </a></li>
+					<li><a href="#"> 全聚德 </a></li>
+					<li><a href="#"> 天安门 </a></li>					
+					<li><a href="#"> 地铁 </a></li>
+				</ul>
+			</div>
+			<div class = 'place'>
+				<p>上海</p>
+				<ul>
+					<li><a href="#"> 上海迪士尼 </a></li>
+					<li><a href="#"> 蜜月游 </a></li>
+					<li><a href="#"> 徒步爬山 </a></li>
+				</ul>
+			</div>
+			<div class = 'place'>
+				<p>深圳</p>
+				<ul>
+					<li><a href="#"> 长隆世界 </a></li>
+					<li><a href="#"> 世界之窗 </a></li>
+					<li><a href="#"> 水上乐园 </a></li>
+					<li><a href="#"> 美食大街 </a></li>					
+
+				</ul>
+			</div>
+	</div>
+	<div class = 'rightsidebox '>
+			<!-- Nav tabs -->
+		<ul class="nav nav-tabs">
+		  <li class = "active"><a href="#home" data-toggle="tab">猜你喜欢</a></li>
+		  <li><a href="#profile" data-toggle="tab">香港</a></li>
+		  <li><a href="#messages" data-toggle="tab">台湾</a></li>
+		  <li><a href="#settings" data-toggle="tab">日本</a></li>
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+		  <div class="tab-pane fade in active" id="home">
+				
+				<div class="row">
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/1.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>日本之旅</h3>
+								<p>日本大阪+京都6日5晚半自助游(4钻)</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/2.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>印度尼西亚</h3>
+								<p>巴厘岛6日4晚半自助游(4钻)</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/3.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>海南邮轮</h3>
+								<p>南海邮轮【南海之梦】4天3晚三沙+三沙</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		  <div class="tab-pane fade" id="profile">
+				<div class="row">
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/1.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/2.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/3.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		  <div class="tab-pane fade" id="messages">
+				<div class="row">
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/7.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/6.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/5.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		  <div class="tab-pane fade" id="settings">
+				<div class="row">
+				<div style="float: left">
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/9.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>label1</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/8.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>label2</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/7.jpg" alt="..." >
+							<img src="images/9.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>label3</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/7.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>label3</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/7.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>label3</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/7.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>label3</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				 </div>
+			</div>
+		</div>
+	</div>
+		
+		<div  class = 'container lf'>
+	<div class = 'leftsidebox '>
+		<div class = 'title'>
+			<span class="glyphicon glyphicon-adjust"></span>
+			<span class = 't'>周边旅游</span>
+		</div>
+			
+			<div class = 'place'>
+				<p>特色地点</p>
+				
+				<ul>
+					<li><p> XXXX </p></li>
+					<li><p> XXXX </p></li>
+					<li><p> XXXX </p></li>
+					<li><p> XXXX </p></li>					
+					<li><p> XXXX </p></li>
+				</ul>
+			</div>
+			<div class = 'place'>
+				<p>特色地点2</p>
+				<ul>
+					<li><p>XXXX</p></li>
+					<li><p>XXXX</p></li>
+					<li><p>XXXX</p></li>
+					<li><p>XXXX</p></li>					
+					<li><p>XXXX</p></li>
+				</ul>
+			</div>
+			<div class = 'place'>
+				<p>特色地点3</p>
+				<ul>
+					<li><p>XXXX</p></li>
+					<li><p>XXXX</p></li>
+					<li><p>XXXX</p></li>
+					<li><p>XXXX</p></li>					
+					<li><p>XXXX</p></li>
+				</ul>
+			</div>
+	</div>
+	<div class = 'rightsidebox '>
+			<!-- Nav tabs -->
+		<ul class="nav nav-tabs">
+		  <li class = "active"><a href="#home2" data-toggle="tab">Home</a></li>
+		  <li><a href="#profile2" data-toggle="tab">Profile</a></li>
+		  <li><a href="#messages2" data-toggle="tab">Messages</a></li>
+		  <li><a href="#settings2" data-toggle="tab">Settings</a></li>
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+		  <div class="tab-pane fade in active" id="home2">
+				
+				<div class="row">
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/1.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/2.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/3.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		  <div class="tab-pane fade" id="profile2">
+				<div class="row">
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/1.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/2.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/3.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		  <div class="tab-pane fade" id="messages2">
+				<div class="row">
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/7.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/6.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/5.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		  <div class="tab-pane fade" id="settings2">
+				<div class="row">
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/9.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/8.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/7.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/7.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/7.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/7.jpg" alt="...">
+							<img src="images/4.jpg" alt="..." style = "display:none">
+							<div class="caption">
+								<h3>Thumbnail label</h3>
+								<p>我的家乡</p>
+								<p>
+									<a href="#" class="btn btn-primary" role="button">Button</a> <a
+										href="#" class="btn btn-default" role="button">Button</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				 </div>
+			</div>
+		</div>
+	</div>
+		<footer>
+			<div class="row">		
+	 			<div class="col-md-4 footer-left">
+	 				<h3>关于我们</h3>
+	 				<ul>
+	 					<li data-placement="left" data-trigger = 'hover'><span class="glyphicon glyphicon-qrcode" ></span></li>
+	 					<li><span class="glyphicon glyphicon-briefcase"></span></li>
+	 					<li><span class="glyphicon glyphicon-globe"></span></li>
+	 					<li><span class="glyphicon glyphicon-bullhorn"></span></li>
+	 				</ul>
+	 				<p>我们这里有最专业的团队，带领你去浪漫的土耳其，还有东京和巴黎</p>
+	 			</div>
+			  <div class="col-md-4 footer-center">
+			  	<h3>导航指南</h3>
+		  		<ul>
+ 					<li>
+ 						<span class="glyphicon glyphicon-hand-right"></span>
+ 						<a href = "#">旅游资讯</a>
+ 					</li>
+ 					<li>
+ 						<span class="glyphicon glyphicon-hand-right"></span>
+ 						<a href = "#">加盟合作</a>
+ 					</li>
+ 					<li>
+ 						<span class="glyphicon glyphicon-hand-right"></span>
+ 						<a href = "#">用户协议</a>
+ 					</li>
+ 					<li>
+ 						<span class="glyphicon glyphicon-hand-right"></span>
+ 						<a href = "#">特殊服务</a>
+ 					</li>
+ 				</ul>
+			  </div>
+			  		
+			  <div class="col-md-4 footer-right">
+			  		<h3>联系我们</h3>
+			  			<div id = "send">
+			  				<form action="sendMessage">
+				  				<input type="email" class="form-control" 
+				  				id="exampleInputEmail1" placeholder="Email" name = "email">
+				  				<button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+			  				</form>
+			  			</div>		  		
+			  		<p>给我你的问题，我们会第一时间通知你</p>
+			  </div>
+			</div>
+		</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>查询</title>
+<link href = '../dist/css/bootstrap.min.css' rel = "stylesheet">
+<link href = 'css/header.css' rel = "stylesheet">
+<link href = 'css/search.css' rel = "stylesheet">
+<link href = 'css/footer.css' rel = "stylesheet">
+<script type="text/javascript" src = '../jquery-3.1.1.min.js'></script>
+<script type="text/javascript" src = '../dist/js/bootstrap.min.js'></script>
+
+</head>
+<body data-target =".right_id">
+
+	<header class = 'container'>
+		<nav class = "navbar navbar-default">
+			<div class = "container-fluid">
+				<div class = "navbar-header">
+					<a class="navbar-brand" href="#">开心旅游</a>
+				</div>   	 
+				<ul class="nav navbar-nav navbar-right">
+					<!-- 搜索框 -->
+					 <form class="navbar-form navbar-left">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Search">
+		        </div>
+		        <button type="submit" class="btn btn-primary">搜索</button>
+	     		</form>
+					<li><a href="#">Link</a></li>	
+					<li><a href="#">Link</a></li>	
+					<li><a href="#">Link</a></li>	
+					<li class = "user_info">
+							<div class="dropdown ">
+							    <!-- <button type="button" class="btn dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">主题 -->
+							    	<img alt="" src="images/1.jpg" id="dropdownMenu" data-toggle="dropdown">
+							    </button>
+							    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+							        <li role="presentation">
+							            <a role="menuitem" tabindex="-1" href="#">个人中心</a>
+							        </li>
+							        <li role="presentation">
+							            <a role="menuitem" tabindex="-1" href="#">我的订单</a>
+							        </li>
+							        <li role="presentation">
+							            <a role="menuitem" tabindex="-1" href="#">我的钱包</a>
+							        </li>
+							        <li role="presentation" class="divider"></li>
+							        <li role="presentation">
+							            <a role="menuitem" tabindex="-1" href="#">我的优惠卷</a>
+							        </li>
+							    </ul>
+							</div>
+						</li>					
+				</ul>				
+			</div>
+		</nav>	
+	</header>
+	<div class= "bath_bar container">
+		<ol class="breadcrumb">
+		  <li><a href="#">酒店服务</a></li>
+		  <li><a href="#">上海酒店</a></li>	  
+		</ol>
+	</div>
+	<div class = "filter_box">
+		<div class = "filter_item">
+			<div class = "filter_item_hd">价格</div>	
+			<div class = "filter_item_bd">
+				<a href = "#">不限</a>
+				<label >
+					<input type="checkbox"><span>￥150以下</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>￥150-300</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>￥300-450</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>￥450-600</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>￥600以上</span>
+				</label>
+			</div>
+		</div>
+		<div class = "filter_item">
+			<div class = "filter_item_hd">星级</div>
+			<div class = "filter_item_bd">
+				<a href = "#">不限</a>
+				<label >
+					<input type="checkbox"><span>二星级以及以下</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>三星级/舒适</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>四星级/高档</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>五星级/豪华</span>
+				</label>
+			</div>
+		</div>
+		<div class = "filter_item">
+			<div class = "filter_item_hd">特色</div>
+			<div class = "filter_item_bd">
+				<a href = "#">不限</a>
+				<label >
+					<input type="checkbox"><span>公寓</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>客栈</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>民居</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>别墅</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>青旅</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>温泉酒店</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>海滨风光</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>休闲度假</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>亲子酒店</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>浪漫情侣</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>商务出行</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>农家乐</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>精品酒店</span>
+				</label>
+				<label >
+					<input type="checkbox"><span>豪宅</span>
+				</label>
+				
+			</div>
+					
+		</div>
+		<div class = "filter_item">
+			<div class = "filter_item_hd">特色</div>
+				<div class = "filter_item_bd brand_item">
+					<a href = "#" class = "fl">不限</a>
+					<div class = "tab_hd fl">
+						<ul class="nav nav-tabs" id="myTab" >
+						  <li class="active"><a href="#home" data-toggle="tab">经济连锁</a></li>
+						  <li><a href="#profile" data-toggle="tab">中端连锁</a></li>
+						  <li><a href="#messages" data-toggle="tab">高端连锁</a></li>
+						  <li><a href="#settings" data-toggle="tab">其他品牌</a></li>
+						</ul>
+					
+					
+					<div class="tab-content">
+					  <div class="tab-pane active" id="home">
+							<label >
+								<input type="checkbox"><span>全部快捷酒店</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>Q+</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>如家快捷</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>海友</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>怡莱</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>汉庭</span>
+							</label>
+							<a href = '#'>更多</a>
+						</div>
+					  <div class="tab-pane" id="profile">
+							<label >
+								<input type="checkbox"><span>亲子酒店</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>浪漫情侣</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>商务出行</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>农家乐</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>精品酒店</span>
+							</label>
+						</div>
+						
+						
+					  <div class="tab-pane" id="messages">
+							<label >
+								<input type="checkbox"><span>亲子酒店</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>浪漫情侣</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>商务出行</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>农家乐</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>精品酒店</span>
+							</label>
+						</div>
+					  <div class="tab-pane" id="settings">
+							<label >
+								<input type="checkbox"><span>亲子酒店</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>浪漫情侣</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>商务出行</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>农家乐</span>
+							</label>
+							<label >
+								<input type="checkbox"><span>精品酒店</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			
+				
+				</div>
+				
+			</div>
+	</div>
+	<!-- 标签列表 -->
+	
+	<div class = "hotel_list">
+		<div class = "hotel_list_new">
+			<div class = "hotel_pic">
+				<span>查看相册</span>
+				<img src="images/10.jpg" class="img-responsive img-rounded" alt="Responsive image">				
+			</div>
+			
+			<div class = "hotel_info">
+				<h2>
+					<a href="#"><i>慢心酒店</i></a>
+					<span>品质保障</span>
+				</h2>
+				
+				<p class = "hotel_item_address">【 上海火车站地区 人民广场地区】静安区天目西路111号，近梅园路、太平洋百货</p>
+				<p class = "ht_special_label">
+					<span>
+						<i>浪漫情侣</i>
+						<i>商务出行</i>
+					</span>
+				</p>
+				<p class = "icon_list">
+					<span>live band,紧邻地铁1、3、4号线</span>
+				</p>
+				<p class = "hotel_last_book">
+					最新预订：3小时前
+				</p>
+			</div>
+			<div class = "hotel_item_juge">
+				<p class = "hotel_level">超棒4.7</p>
+				<p class = "total_judgement_score"><i>99%</i>用户推荐</p>
+				<p class = "hotel_judgement">源自位<span>xxx</span>客户点评</p>
+				<p class = "recommend">房间很好</p>
+				<p class = "recommend">设备齐全</p>
+				<p class = "total_favorite"><a href = "#">收藏</a></p>
+			</div>
+			
+			<div class = "hotel_other">
+				<div class = "hotel_price">
+					<dfn>￥</dfn><span>490</span><i>起</i>
+				</div>
+				<div class = "action_info">
+					<button type="button" class="btn btn-warning">查看详细</button>
+				</div>
+			</div>
+		</div>
+		<div class = "hotel_list_new">
+			<div class = "hotel_pic">
+				<span>查看相册</span>
+				<img src="images/10.jpg" class="img-responsive img-rounded" alt="Responsive image">				
+			</div>
+			
+			<div class = "hotel_info">
+				<h2>
+					<a href="#"><i>慢心酒店</i></a>
+					<span>品质保障</span>
+				</h2>
+				
+				<p class = "hotel_item_address">【 上海火车站地区 人民广场地区】静安区天目西路111号，近梅园路、太平洋百货</p>
+				<p class = "ht_special_label">
+					<span>
+						<i>浪漫情侣</i>
+						<i>商务出行</i>
+					</span>
+				</p>
+				<p class = "icon_list">
+					<span>live band,紧邻地铁1、3、4号线</span>
+				</p>
+				<p class = "hotel_last_book">
+					最新预订：3小时前
+				</p>
+			</div>
+			<div class = "hotel_item_juge">
+				<p class = "hotel_level">超棒4.7</p>
+				<p class = "total_judgement_score"><i>99%</i>用户推荐</p>
+				<p class = "hotel_judgement">源自位<span>xxx</span>客户点评</p>
+				<p class = "recommend">房间很好</p>
+				<p class = "recommend">设备齐全</p>
+				<p class = "total_favorite"><a href = "#">收藏</a></p>
+			</div>
+			
+			<div class = "hotel_other">
+				<div class = "hotel_price">
+					<dfn>￥</dfn><span>490</span><i>起</i>
+				</div>
+				<div class = "action_info">
+					<button type="button" class="btn btn-warning">查看详细</button>
+				</div>
+			</div>
+		</div>
+		<div class = "hotel_list_new">
+			<div class = "hotel_pic">
+				<span>查看相册</span>
+				<img src="images/10.jpg" class="img-responsive img-rounded" alt="Responsive image">				
+			</div>
+			
+			<div class = "hotel_info">
+				<h2>
+					<a href="#"><i>慢心酒店</i></a>
+					<span>品质保障</span>
+				</h2>
+				
+				<p class = "hotel_item_address">【 上海火车站地区 人民广场地区】静安区天目西路111号，近梅园路、太平洋百货</p>
+				<p class = "ht_special_label">
+					<span>
+						<i>浪漫情侣</i>
+						<i>商务出行</i>
+					</span>
+				</p>
+				<p class = "icon_list">
+					<span>live band,紧邻地铁1、3、4号线</span>
+				</p>
+				<p class = "hotel_last_book">
+					最新预订：3小时前
+				</p>
+			</div>
+			<div class = "hotel_item_juge">
+				<p class = "hotel_level">超棒4.7</p>
+				<p class = "total_judgement_score"><i>99%</i>用户推荐</p>
+				<p class = "hotel_judgement">源自位<span>xxx</span>客户点评</p>
+				<p class = "recommend">房间很好</p>
+				<p class = "recommend">设备齐全</p>
+				<p class = "total_favorite"><a href = "#">收藏</a></p>
+			</div>
+			
+			<div class = "hotel_other">
+				<div class = "hotel_price">
+					<dfn>￥</dfn><span>490</span><i>起</i>
+				</div>
+				<div class = "action_info">
+					<button type="button" class="btn btn-warning">查看详细</button>
+				</div>
+			</div>
+		</div>
+		
+		<nav aria-label="Page navigation">
+		  <ul class="pagination">
+		    <li>
+		      <a href="#" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>
+		    <li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li>
+		      <a href="#" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+	<div class = "right_id ">
+		<div class = "id_info">
+			<h1>我是广告</h1>
+		</div>
+	</div>
+	</div>
+
+		<footer>
+			<div class="row">		
+	 			<div class="col-md-4 footer-left">
+	 				<h3>关于我们</h3>
+	 				<ul>
+	 					<li data-placement="left" data-trigger = 'hover'><span class="glyphicon glyphicon-qrcode" ></span></li>
+	 					<li><span class="glyphicon glyphicon-briefcase"></span></li>
+	 					<li><span class="glyphicon glyphicon-globe"></span></li>
+	 					<li><span class="glyphicon glyphicon-bullhorn"></span></li>
+	 				</ul>
+	 				<p>To take a trivial example, which of us ever undertakes laborious 
+	 				physical exercise, 
+	 				except to obtain some
+	 				 advantage from it.</p>
+	 			</div>
+			  <div class="col-md-4 footer-center">
+			  	<h3>导航指南</h3>
+		  		<ul>
+ 					<li>
+ 						<span class="glyphicon glyphicon-hand-right"></span>
+ 						<a href = "#">旅游资讯</a>
+ 					</li>
+ 					<li>
+ 						<span class="glyphicon glyphicon-hand-right"></span>
+ 						<a href = "#">加盟合作</a>
+ 					</li>
+ 					<li>
+ 						<span class="glyphicon glyphicon-hand-right"></span>
+ 						<a href = "#">用户协议</a>
+ 					</li>
+ 					<li>
+ 						<span class="glyphicon glyphicon-hand-right"></span>
+ 						<a href = "#">特殊服务</a>
+ 					</li>
+ 				</ul>
+			  </div>
+			  		
+			  <div class="col-md-4 footer-right">
+			  		<h3>联系我们</h3>
+			  			<div id = "send">
+			  				<form action="">
+				  				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+				  				<button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+			  				</form>
+			  			</div>		  		
+			  		<p>Join our newsletter to keep be informed about new templates.</p>
+			  </div>
+			</div>
+		</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

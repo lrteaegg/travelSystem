@@ -1,0 +1,263 @@
+
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		background-color: #f5f5f5;
+	}
+	.border{
+		border: 1px solid red;
+	}
+	.filter_box{
+		width: 1120px;
+		height: 350px;
+		margin:0px auto;
+		padding: 5px;
+		border-radius: 5px;
+		
+		background-color: #fff;
+	}
+	.filter_item{
+		width: 1000px;
+		
+		margin:0px 15px;
+		padding: 10px 30px;
+		border-bottom:  1px solid #f1f1f1;
+	}
+	.filter_item_hd{
+		float:left;
+		margin-left: -36px;
+		margin-right: 20px;
+		color: #999;
+	
+	}
+	.filter_item_bd{
+			padding-left: 70px;
+			
+	}
+	.filter_item_bd>a{
+		width: 47px;
+		height: 20px;
+	
+		margin-left: -50px;
+		
+		color: #fff;
+		text-align:center;
+		
+		background-color: #2577e3;
+		display: inline-block;
+	}
+	.filter_item_bd label{
+		width: 107px;
+		height: 22px;
+		padding-right:10px;
+		margin-left: 25px;
+		color: #333;
+		cursor: pointer;
+	}
+	.brand_item{
+		height: 67px;
+	}
+.tab_hd{
+	margin-left: 20px;
+	display: inline;
+}
+.nav-tabs>li>a{
+	line-height: 10px;
+}
+.fl{
+	float: left;	
+}
+.tab-content{
+	margin-top: 10px;	
+}
+
+/* 标签块 */
+.hotel_list{
+		width: 1120px;
+		padding-top:16px;
+		padding-right: 250px;
+		margin: 0px auto;	
+		position: relative;
+	}
+	.hotel_list_new{
+		width:100%;
+		height: 290px;
+		margin-bottom: 15px;
+		padding: 10px 0px;
+		border-radius: 5px;
+		background-color: #fff;
+	}	
+	.hotel_pic{
+		width:230px;
+		height:230px;
+		
+		margin:20px;
+		float:left;
+		position: relative;
+	}
+	.hotel_pic span{		
+		width: 230px;
+		height: 35px;
+		line-height: 35px;
+		text-align:center;
+		color: #fff;
+		cursor:pointer;
+		background-color: #06c;	
+		top: 193px;
+		position: absolute;
+	}
+	
+	.hotel_pic span:hover {
+		color: red;
+	}
+	.hotel_info{
+		width: 300px;
+		float:left;
+	}
+	
+	.hotel_info a{
+		color: #06c;
+		font-size: 27px;
+	}
+	.hotel_info h2 span{
+		padding:3px;
+		border-radius: 3px;
+		margin-left: 50px;
+		color: #ff9913;		
+		font-size: 12px;
+		background-color:#feedd5;
+	}
+	.hotel_item_address{
+		color: #666;
+		font-size:10px;
+	}
+	.ht_special_label i{
+	
+		margin:0px 2px;
+		padding: 2px;
+		border-radius: 5px;
+		
+		color:#fff;
+		
+		background-color: #7be;
+	}
+	.icon_list{
+		
+	}
+	.icon_list span{
+		
+		border: 1px solid #fee4bf;
+		color: rgb( 255, 142, 0 );
+		padding-left: 23px;
+	}
+	.hotel_last_book{
+		margin-top: 85px;
+		color: rgb(16, 162, 0 );
+	}
+	.hotel_item_juge{
+		width: 102px;
+		margin-top: 10px;
+		margin-right: 5px;
+		text-align:right;
+		float: left;
+	}
+	.hotel_level{
+		font-size: 20px;	
+		font-weight: bold;
+		color: #0066cc;
+	}
+	
+	.total_judgement_score{
+		color:#999;
+		font-size: 12px;
+	}
+	.total_judgement_score i{
+		color: #009933;
+	}
+	.hotel_judgement{
+		margin-bottom:16px;
+	
+		color:#999;
+		font-size: 12px;
+	}
+	.hotel_judgement span{
+		color: #FF9900;
+	}
+	.recommend{
+		
+		color: #666;
+	}
+	.total_favorite{
+		
+		margin-top: 45px;
+	}
+	.hotel_other{
+		width: 152px;
+		height: 265px;
+		
+		border-left: 1px solid #f1f1f1;
+		
+		text-align: right;
+		float: left;
+	}
+	.hotel_price {
+	
+		padding: 10px;
+		margin-bottom: 50px;
+		color: #F60;
+	}
+	
+	.hotel_price dfn{
+		vertical-align:17px;
+		font-size: 17px;
+		
+	}
+	.hotel_price span{
+		font-size: 42px;
+	}
+	.action_info{
+		padding: 13px;
+		position: relative;
+		top: 50px;
+	}
+	.action_info button{
+		width: 125px;
+	}
+	.right_id{
+		width: 250px;
+		padding: 20px;
+		top:15px;	
+		left: 870px;
+		text-align:center;
+		position: absolute;
+	}
+	.id_info h1{
+		font-size: 106px;
+	}
+	
+	.pagination{
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
