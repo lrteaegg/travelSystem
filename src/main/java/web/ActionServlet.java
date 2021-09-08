@@ -78,7 +78,7 @@ private void processAddUser(HttpServletRequest request,
 	}
 	//存在用户名
 	if (dao.find(uname)!=null) {
-		request.setAttribute("failed", "用户民存在！");
+		request.setAttribute("failed", "用户名已存在！");
 		request.getRequestDispatcher("register.jsp").forward(request,response);
 		return;
 	}
